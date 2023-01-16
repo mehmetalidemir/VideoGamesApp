@@ -9,4 +9,6 @@ import Foundation
 
 final class ListViewModel {
     
+    var games: [String] = ["den","asda","asdasd","asdasd","asdasd","asd","asdg"]
+    
 }
