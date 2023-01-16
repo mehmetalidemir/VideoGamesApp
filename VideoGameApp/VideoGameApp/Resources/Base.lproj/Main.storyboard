@@ -28,35 +28,35 @@
                                 <rect key="frame" x="0.0" y="200" width="414" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" id="VEh-aU-Q3n" customClass="ListTableViewCell" customModule="VideoGameApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="116.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" rowHeight="130" id="VEh-aU-Q3n" customClass="ListTableViewCell" customModule="VideoGameApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VEh-aU-Q3n" id="VH5-DB-k5T">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdasda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-bO-yX9">
-                                                    <rect key="frame" x="208" y="19" width="178" height="78.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdasda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-bO-yX9">
+                                                    <rect key="frame" x="16" y="8" width="266" height="114"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-i3-O3u">
-                                                    <rect key="frame" x="8" y="8" width="100" height="100.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-i3-O3u">
+                                                    <rect key="frame" x="298" y="8" width="100" height="114"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="1hM-mc-bYN"/>
-                                                        <constraint firstAttribute="width" constant="100" id="wL3-Wr-zII"/>
+                                                        <constraint firstAttribute="width" constant="100" id="nSC-Li-L3c"/>
+                                                        <constraint firstAttribute="height" constant="100" id="pFj-Q0-yi4"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="X8k-bO-yX9" firstAttribute="leading" secondItem="hpx-i3-O3u" secondAttribute="trailing" constant="100" id="8ga-R0-844"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="X8k-bO-yX9" secondAttribute="bottom" constant="8" id="BdF-Oa-Hh8"/>
-                                                <constraint firstItem="hpx-i3-O3u" firstAttribute="top" secondItem="VH5-DB-k5T" secondAttribute="top" constant="8" id="DTK-i9-zhN"/>
-                                                <constraint firstItem="X8k-bO-yX9" firstAttribute="top" secondItem="VH5-DB-k5T" secondAttribute="topMargin" constant="8" id="XQk-Ix-ZZu"/>
-                                                <constraint firstItem="hpx-i3-O3u" firstAttribute="leading" secondItem="VH5-DB-k5T" secondAttribute="leading" constant="8" id="bQB-NE-ky8"/>
-                                                <constraint firstAttribute="bottom" secondItem="hpx-i3-O3u" secondAttribute="bottom" constant="8" id="rIS-MA-9kC"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="X8k-bO-yX9" secondAttribute="trailing" constant="8" id="tIi-az-pVc"/>
+                                                <constraint firstItem="hpx-i3-O3u" firstAttribute="leading" secondItem="X8k-bO-yX9" secondAttribute="trailing" constant="16" id="0SH-I7-30Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="X8k-bO-yX9" secondAttribute="bottom" constant="8" id="E8Y-lN-qez"/>
+                                                <constraint firstAttribute="trailing" secondItem="hpx-i3-O3u" secondAttribute="trailing" constant="16" id="EWf-YA-fja"/>
+                                                <constraint firstItem="hpx-i3-O3u" firstAttribute="top" secondItem="VH5-DB-k5T" secondAttribute="top" constant="8" id="Fs5-UE-wGc"/>
+                                                <constraint firstAttribute="bottom" secondItem="hpx-i3-O3u" secondAttribute="bottom" constant="8" id="HuI-AH-HXM"/>
+                                                <constraint firstItem="X8k-bO-yX9" firstAttribute="top" secondItem="VH5-DB-k5T" secondAttribute="top" constant="8" id="bvb-Lo-aKB"/>
+                                                <constraint firstItem="X8k-bO-yX9" firstAttribute="leading" secondItem="VH5-DB-k5T" secondAttribute="leading" constant="16" id="fce-tx-dqu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -66,6 +66,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" id="0s6-O1-VFU">
+                                <rect key="frame" x="0.0" y="302" width="414" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.92237426639999998" green="0.47428392390000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,12 +87,13 @@
                     <navigationItem key="navigationItem" title="List" largeTitleDisplayMode="always" id="70S-hF-IuT"/>
                     <connections>
                         <outlet property="gameTableView" destination="cXf-OC-i3k" id="s5M-Qe-u8q"/>
+                        <outlet property="loadingIndicator" destination="0s6-O1-VFU" id="wTj-0h-SB0"/>
                         <outlet property="searchBar" destination="SMU-SG-oSU" id="5C9-0t-PFp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="972.46376811594212" y="-2.6785714285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S6u-La-wdp">
