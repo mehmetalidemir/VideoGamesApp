@@ -18,6 +18,9 @@
 		74425D782975B39C00004439 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D772975B39C00004439 /* ListViewController.swift */; };
 		74425D7A2975B3A500004439 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D792975B3A500004439 /* ListViewModel.swift */; };
 		74425D7D2975B72100004439 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D7C2975B72100004439 /* ListTableViewCell.swift */; };
+		74425D812975BF4E00004439 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D802975BF4E00004439 /* NetworkManager.swift */; };
+		74425D832975BF8600004439 /* InternetReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D822975BF8600004439 /* InternetReachabilityManager.swift */; };
+		74425D852975C28100004439 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D842975C28100004439 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		74425D772975B39C00004439 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		74425D792975B3A500004439 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		74425D7C2975B72100004439 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		74425D802975BF4E00004439 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		74425D822975BF8600004439 /* InternetReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetReachabilityManager.swift; sourceTree = "<group>"; };
+		74425D842975C28100004439 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,8 @@
 		74425D6A2975B09500004439 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				74425D802975BF4E00004439 /* NetworkManager.swift */,
+				74425D822975BF8600004439 /* InternetReachabilityManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 		74425D6C2975B0A300004439 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74425D842975C28100004439 /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,8 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				74425D7A2975B3A500004439 /* ListViewModel.swift in Sources */,
+				74425D852975C28100004439 /* Game.swift in Sources */,
 				74425D4D2975AFF100004439 /* AppDelegate.swift in Sources */,
 				74425D4F2975AFF100004439 /* SceneDelegate.swift in Sources */,
+				74425D832975BF8600004439 /* InternetReachabilityManager.swift in Sources */,
+				74425D812975BF4E00004439 /* NetworkManager.swift in Sources */,
 				74425D782975B39C00004439 /* ListViewController.swift in Sources */,
 				74425D572975AFF100004439 /* VideoGameApp.xcdatamodeld in Sources */,
 				74425D7D2975B72100004439 /* ListTableViewCell.swift in Sources */,

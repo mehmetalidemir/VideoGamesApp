@@ -9,6 +9,18 @@ import Foundation
 
 final class ListViewModel {
     
-    var games: [String] = ["den","asda","asdasd","asdasd","asdasd","asd","asdg"]
+    var games: [Game] = []
+    
+    func fetchGames(didGetSuccessfully: @escaping (Bool) -> Void) {
+        NetworkManager.shared.fetchData { result in
+            switch result {
+            case .success(let games):
+                self.games = games.results
+                didGetSuccessfully(true)
+            case .failure(let error):
+                didGetSuccessfully(false)
+            }
+        }
+    }
     
 }
