@@ -40,6 +40,16 @@ class ListViewController: UIViewController {
             
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetailVC" {
+            guard let detailVC = segue.destination as? DetailViewController else { return }
+            if let game = sender as? Game {
+                detailVC.game = game
+            }
+            
+        }
+    }
 
 }
 
@@ -56,6 +66,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToDetailVC", sender: self.viewModel.games[indexPath.row])
     }
     
     
