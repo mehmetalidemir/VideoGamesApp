@@ -15,8 +15,7 @@ final class NetworkManager {
     
     func fetchData(completionHandler: @escaping (Result<GameResponse,NetworkError>) -> Void) {
         if InternetReachabilityManager.shared.isInternetActive() {
-            let apiKey = "a9dc202186f5446bb0702b8e6cf64d97"
-            guard let url = URL(string: "https://api.rawg.io/api/games?key=\(apiKey)") else { return }
+            guard let url = URL(string: "\(APIConstants.baseAPI)\(APIConstants.gameEndpoint)\(APIConstants.apiKey)") else { return }
             URLSession.shared.dataTask(with: url) { data, _, error in
                 if let data = data {
                     let decoder = JSONDecoder()
