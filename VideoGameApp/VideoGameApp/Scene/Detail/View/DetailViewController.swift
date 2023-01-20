@@ -8,17 +8,17 @@
 import UIKit
 
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
+
+    @IBOutlet private weak var ratingLabel: UILabel!
+    @IBOutlet private weak var gameImageView: UIImageView!
+    @IBOutlet private weak var gameLabel: UILabel!
+    @IBOutlet private weak var reviews_countLabel: UILabel!
+    @IBOutlet private weak var genres: UILabel!
+    @IBOutlet private weak var releasedLabel: UILabel!
+    @IBOutlet private weak var platforms: UILabel!
+
     var game: Game!
-
-    @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var gameImageView: UIImageView!
-    @IBOutlet weak var gameLabel: UILabel!
-    @IBOutlet weak var reviews_countLabel: UILabel!
-    @IBOutlet weak var genres: UILabel!
-    @IBOutlet weak var releasedLabel: UILabel!
-    @IBOutlet weak var platforms: UILabel!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,6 @@ class DetailViewController: UIViewController {
 
         let platformsText = "Platforms: \(game.platforms.map { $0.platform.name }.joined(separator: ", "))"
         self.platforms.text = String(platformsText)
-
 
     }
 

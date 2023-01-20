@@ -32,7 +32,6 @@ final class NetworkManager {
                 }
             }.resume()
         } else {
-            // core data eklencek
         }
         
     }
