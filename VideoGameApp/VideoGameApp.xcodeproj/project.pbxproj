@@ -22,7 +22,7 @@
 		74425D812975BF4E00004439 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D802975BF4E00004439 /* NetworkManager.swift */; };
 		74425D832975BF8600004439 /* InternetReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D822975BF8600004439 /* InternetReachabilityManager.swift */; };
 		74425D852975C28100004439 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D842975C28100004439 /* Game.swift */; };
-		74D067362975CFCD00B014E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D067352975CFCD00B014E4 /* DetailViewController.swift */; };
+		74D067362975CFCD00B014E4 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D067352975CFCD00B014E4 /* GameDetailViewController.swift */; };
 		74F2F80C297965C10015B267 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2F80B297965C10015B267 /* NewEntryViewController.swift */; };
 		74F2F80F29797D650015B267 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2F80E29797D650015B267 /* NoteCell.swift */; };
 		74F2F81129797DB20015B267 /* NoteTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2F81029797DB20015B267 /* NoteTableViewModel.swift */; };
@@ -46,7 +46,7 @@
 		74425D802975BF4E00004439 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		74425D822975BF8600004439 /* InternetReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetReachabilityManager.swift; sourceTree = "<group>"; };
 		74425D842975C28100004439 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		74D067352975CFCD00B014E4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		74D067352975CFCD00B014E4 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		74F2F80B297965C10015B267 /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 		74F2F80E29797D650015B267 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		74F2F81029797DB20015B267 /* NoteTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewModel.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		74425D6F2975B0E200004439 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				74D067352975CFCD00B014E4 /* DetailViewController.swift */,
+				74D067352975CFCD00B014E4 /* GameDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 				74425D832975BF8600004439 /* InternetReachabilityManager.swift in Sources */,
 				74425D812975BF4E00004439 /* NetworkManager.swift in Sources */,
 				74425D782975B39C00004439 /* ListViewController.swift in Sources */,
-				74D067362975CFCD00B014E4 /* DetailViewController.swift in Sources */,
+				74D067362975CFCD00B014E4 /* GameDetailViewController.swift in Sources */,
 				74425D572975AFF100004439 /* VideoGameApp.xcdatamodeld in Sources */,
 				74425D7D2975B72100004439 /* ListTableViewCell.swift in Sources */,
 				742B2869297AB2A700BCF003 /* CoreDataManager.swift in Sources */,

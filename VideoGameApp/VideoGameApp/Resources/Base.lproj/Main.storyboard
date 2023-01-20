@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="972.46376811594212" y="-2.6785714285714284"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Game Detail View Controller-->
         <scene sceneID="QQc-bu-XOt">
             <objects>
-                <viewController storyboardIdentifier="detailVC" id="MQm-fq-ynY" customClass="DetailViewController" customModule="VideoGameApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="MQm-fq-ynY" customClass="GameDetailViewController" customModule="VideoGameApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eVH-UQ-4Ye">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="text.bubble.fill" catalog="system" id="ySt-sN-097">
                                 <connections>
-                                    <segue destination="RSq-QV-V5R" kind="show" id="RZy-Xd-2O7"/>
+                                    <segue destination="RSq-QV-V5R" kind="show" identifier="goToNotesView" id="RZy-Xd-2O7"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="star" catalog="system" id="uGv-ap-mnl"/>
@@ -378,7 +378,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kJJ-T3-nWn"/>
+        <segue reference="ZC1-IN-DN6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus.app" catalog="system" width="128" height="114"/>

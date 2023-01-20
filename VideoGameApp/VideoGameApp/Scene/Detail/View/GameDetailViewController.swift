@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  GameDetailViewController.swift
 //  VideoGameApp
 //
 //  Created by Mehmet Ali Demir on 16.01.2023.
@@ -8,7 +8,7 @@
 import UIKit
 
 
-final class DetailViewController: UIViewController {
+final class GameDetailViewController: UIViewController {
 
     @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var gameImageView: UIImageView!
@@ -45,5 +45,11 @@ final class DetailViewController: UIViewController {
 
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToNotesView" {
+            guard let entryVC = segue.destination as? NewEntryViewController else { return }
+            entryVC.game = self.game
+        }
+    }
 
 }
