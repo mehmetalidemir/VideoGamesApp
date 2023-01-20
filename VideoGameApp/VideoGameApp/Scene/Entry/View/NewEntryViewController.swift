@@ -16,6 +16,7 @@ final class NewEntryViewController: UIViewController {
     let noteCellIdentifier: String = "noteTableViewCell"
     
     var notes: [Note] = []
+    var game: Game?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,8 @@ final class NewEntryViewController: UIViewController {
             switch result {
             case .success(let notes):
                 self.notes = notes.filter({ note in
-                    note.deletedDate == nil
+                    print("note game name \(note.gameName)")
+                    return note.deletedDate == nil && note.gameName == self.game?.name ?? ""
                 })
             case .failure(let error):
                 print(error)
@@ -45,16 +47,19 @@ final class NewEntryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "editNote") {
-            let indexPath = noteTableView.indexPathForSelectedRow!
+        if segue.identifier == "editNote" {
+            if let noteDetail = segue.destination as? NoteDetailViewController {
+                let indexPath = noteTableView.indexPathForSelectedRow!
+                let selectedNote: Note!
+                selectedNote = self.notes[indexPath.row]
+                noteDetail.selectedNote = selectedNote
 
-            let noteDetail = segue.destination as? NoteDetailViewController
-
-            let selectedNote: Note!
-            selectedNote = self.notes[indexPath.row]
-            noteDetail!.selectedNote = selectedNote
-
-            noteTableView.deselectRow(at: indexPath, animated: true)
+                noteTableView.deselectRow(at: indexPath, animated: true)
+            }
+        } else if segue.identifier == "newNote" {
+            if let noteDetail = segue.destination as? NoteDetailViewController {
+                noteDetail.game = self.game
+            }
         }
     }
     
@@ -80,7 +85,7 @@ extension NewEntryViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "editNote", sender: self)
+        self.performSegue(withIdentifier: "editNote", sender: nil)
     }
     
 }

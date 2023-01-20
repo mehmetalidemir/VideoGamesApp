@@ -25,7 +25,7 @@ final class ListViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToDetailVC" {
-            guard let detailVC = segue.destination as? DetailViewController else { return }
+            guard let detailVC = segue.destination as? GameDetailViewController else { return }
             if let game = sender as? Game {
                 detailVC.game = game
             }

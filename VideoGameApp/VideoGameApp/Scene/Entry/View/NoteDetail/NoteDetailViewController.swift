@@ -13,21 +13,22 @@ class NoteDetailViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var noteTextField: UITextField!
     
+    var game: Game?
     var selectedNote: Note? = nil
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(selectedNote != nil)
-        {
+        if selectedNote != nil {
             noteTextField.text = selectedNote?.title
             descriptionTextView.text = selectedNote?.desc
         }
         
+        print("note detail game geldi \(self.game?.name)")
+        
     }
     @IBAction func saveButton(_ sender: Any) {
-        CoreDataManager.shared.createNote(title: noteTextField.text ?? "", desc: descriptionTextView.text ?? "", id: noteList.count as NSNumber) { [weak self] in
+        CoreDataManager.shared.createNote(title: noteTextField.text ?? "", desc: descriptionTextView.text ?? "", gameName: self.game?.name ?? "", id: noteList.count as NSNumber) { [weak self] in
             guard let self = self else { return }
             CoreDataManager.shared.saveContext()
             self.navigationController?.popViewController(animated: true)
