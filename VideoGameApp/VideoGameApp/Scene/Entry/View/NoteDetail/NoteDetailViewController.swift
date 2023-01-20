@@ -31,6 +31,7 @@ class NoteDetailViewController: UIViewController {
             CoreDataManager.shared.saveContext()
             self.navigationController?.popViewController(animated: true)
         }
+        LocalNotificationManager.shared.sendNotification()
         
     }
     @IBAction func deleteButtton(_ sender: Any) {
