@@ -31,7 +31,6 @@ final class NewEntryViewController: UIViewController {
             switch result {
             case .success(let notes):
                 self.notes = notes.filter({ note in
-                    print("note game name \(note.gameName)")
                     return note.deletedDate == nil && note.gameName == self.game?.name ?? ""
                 })
             case .failure(let error):

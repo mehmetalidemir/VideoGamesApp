@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		742B2869297AB2A700BCF003 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B2868297AB2A700BCF003 /* CoreDataManager.swift */; };
+		742B2871297AFE0E00BCF003 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B2870297AFE0E00BCF003 /* APIConstants.swift */; };
 		74425D4D2975AFF100004439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D4C2975AFF100004439 /* AppDelegate.swift */; };
 		74425D4F2975AFF100004439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D4E2975AFF100004439 /* SceneDelegate.swift */; };
 		74425D542975AFF100004439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74425D522975AFF100004439 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		742B2868297AB2A700BCF003 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = ../../../../../../Documents/CoreDataManager.swift; sourceTree = "<group>"; };
+		742B2870297AFE0E00BCF003 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		74425D492975AFF100004439 /* VideoGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74425D4C2975AFF100004439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74425D4E2975AFF100004439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		742B286F297AFDFF00BCF003 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				742B2870297AFE0E00BCF003 /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		74425D402975AFF100004439 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 		74425D692975B09000004439 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				742B286F297AFDFF00BCF003 /* Constants */,
 				74425D6C2975B0A300004439 /* Model */,
 				74425D6B2975B09E00004439 /* Extension */,
 				74425D6A2975B09500004439 /* Manager */,
@@ -351,6 +362,7 @@
 			files = (
 				74425D7A2975B3A500004439 /* ListViewModel.swift in Sources */,
 				74F2F814297984E50015B267 /* NoteDetailViewController.swift in Sources */,
+				742B2871297AFE0E00BCF003 /* APIConstants.swift in Sources */,
 				74425D852975C28100004439 /* Game.swift in Sources */,
 				74425D4D2975AFF100004439 /* AppDelegate.swift in Sources */,
 				74F2F80F29797D650015B267 /* NoteCell.swift in Sources */,

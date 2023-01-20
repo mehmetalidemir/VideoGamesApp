@@ -24,8 +24,6 @@ class NoteDetailViewController: UIViewController {
             descriptionTextView.text = selectedNote?.desc
         }
         
-        print("note detail game geldi \(self.game?.name)")
-        
     }
     @IBAction func saveButton(_ sender: Any) {
         CoreDataManager.shared.createNote(title: noteTextField.text ?? "", desc: descriptionTextView.text ?? "", gameName: self.game?.name ?? "", id: noteList.count as NSNumber) { [weak self] in
