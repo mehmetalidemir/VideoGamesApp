@@ -8,23 +8,36 @@
 import UIKit
 import Kingfisher
 
-class ListViewController: UIViewController {
-    
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var gameTableView: UITableView!
-    
+final class ListViewController: UIViewController {
+
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var gameTableView: UITableView!
+
     let cellIdentifier: String = "listTableViewCell"
-    
-    let viewModel: ListViewModel = {
-        let viewModel = ListViewModel()
-        return viewModel
-    }()
+
+    let viewModel: ListViewModel = ListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetailVC" {
+            guard let detailVC = segue.destination as? DetailViewController else { return }
+            if let game = sender as? Game {
+                detailVC.game = game
+            }
+        }
+    }
+}
+
+extension ListViewController {
+    func setupTableView() {
         gameTableView.delegate = self
         gameTableView.dataSource = self
+
         loadingIndicator.startAnimating()
         viewModel.fetchGames { isSuccessfull in
             DispatchQueue.main.async { [weak self] in
@@ -32,32 +45,20 @@ class ListViewController: UIViewController {
                 if isSuccessfull {
                     self.gameTableView.reloadData()
                 } else {
-                    
+                    print(LocalizedError.self)
                 }
                 self.loadingIndicator.stopAnimating()
                 self.loadingIndicator.isHidden = true
             }
-            
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDetailVC" {
-            guard let detailVC = segue.destination as? DetailViewController else { return }
-            if let game = sender as? Game {
-                detailVC.game = game
-            }
-            
-        }
-    }
-
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.games.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? ListTableViewCell {
             cell.gameLabel.text = "\(indexPath.row + 1) - \(viewModel.games[indexPath.row].name)"
@@ -67,10 +68,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToDetailVC", sender: self.viewModel.games[indexPath.row])
     }
-    
-    
 }
