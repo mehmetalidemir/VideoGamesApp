@@ -17,7 +17,7 @@ final class ListViewModel {
             case .success(let games):
                 self.games = games.results
                 didGetSuccessfully(true)
-            case .failure(let error):
+            case .failure(_):
                 didGetSuccessfully(false)
             }
         }
