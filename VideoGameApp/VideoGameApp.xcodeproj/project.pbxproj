@@ -24,6 +24,10 @@
 		74425D812975BF4E00004439 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D802975BF4E00004439 /* NetworkManager.swift */; };
 		74425D832975BF8600004439 /* InternetReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D822975BF8600004439 /* InternetReachabilityManager.swift */; };
 		74425D852975C28100004439 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D842975C28100004439 /* Game.swift */; };
+		746857A2297E935500368D2C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746857A1297E935500368D2C /* UserDefaultsManager.swift */; };
+		748AD907297D4A1A000FD0B6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AD906297D4A1A000FD0B6 /* FavoriteViewController.swift */; };
+		748AD90A297D4A52000FD0B6 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AD909297D4A52000FD0B6 /* FavoriteTableViewCell.swift */; };
+		748AD90C297D506C000FD0B6 /* GameFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AD90B297D506C000FD0B6 /* GameFavorites.swift */; };
 		74D067362975CFCD00B014E4 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D067352975CFCD00B014E4 /* GameDetailViewController.swift */; };
 		74F2F80C297965C10015B267 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2F80B297965C10015B267 /* NewEntryViewController.swift */; };
 		74F2F80F29797D650015B267 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2F80E29797D650015B267 /* NoteCell.swift */; };
@@ -50,6 +54,10 @@
 		74425D802975BF4E00004439 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		74425D822975BF8600004439 /* InternetReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetReachabilityManager.swift; sourceTree = "<group>"; };
 		74425D842975C28100004439 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		746857A1297E935500368D2C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		748AD906297D4A1A000FD0B6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteViewController.swift; path = ../../../../../../../.Trash/Favorite/View/FavoriteViewController.swift; sourceTree = "<group>"; };
+		748AD909297D4A52000FD0B6 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteTableViewCell.swift; path = ../../../../../../../../.Trash/Favorite/View/Cell/FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		748AD90B297D506C000FD0B6 /* GameFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavorites.swift; sourceTree = "<group>"; };
 		74D067352975CFCD00B014E4 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		74F2F80B297965C10015B267 /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 		74F2F80E29797D650015B267 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 		74425D652975B07100004439 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				748AD903297D49E9000FD0B6 /* Favorite */,
 				74F2F806297964EE0015B267 /* Entry */,
 				74425D6E2975B0DD00004439 /* Detail */,
 				74425D662975B07500004439 /* List */,
@@ -181,6 +190,7 @@
 				74425D822975BF8600004439 /* InternetReachabilityManager.swift */,
 				742B2868297AB2A700BCF003 /* CoreDataManager.swift */,
 				742B2872297AFFBB00BCF003 /* LocalNotificationManager.swift */,
+				746857A1297E935500368D2C /* UserDefaultsManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -195,7 +205,9 @@
 		74425D6C2975B0A300004439 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74F2F81629798AAA0015B267 /* Note.swift */,
 				74425D842975C28100004439 /* Game.swift */,
+				748AD90B297D506C000FD0B6 /* GameFavorites.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,10 +244,42 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		748AD903297D49E9000FD0B6 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				748AD905297D4A03000FD0B6 /* View */,
+				748AD904297D49F7000FD0B6 /* ViewModel */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		748AD904297D49F7000FD0B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		748AD905297D4A03000FD0B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				748AD908297D4A40000FD0B6 /* Cell */,
+				748AD906297D4A1A000FD0B6 /* FavoriteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		748AD908297D4A40000FD0B6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				748AD909297D4A52000FD0B6 /* FavoriteTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		74F2F806297964EE0015B267 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
-				74F2F81529798A990015B267 /* Model */,
 				74F2F807297965320015B267 /* ViewModel */,
 				74F2F80A297965600015B267 /* View */,
 			);
@@ -274,14 +318,6 @@
 				74F2F813297984E50015B267 /* NoteDetailViewController.swift */,
 			);
 			path = NoteDetail;
-			sourceTree = "<group>";
-		};
-		74F2F81529798A990015B267 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				74F2F81629798AAA0015B267 /* Note.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,16 +403,20 @@
 				74F2F814297984E50015B267 /* NoteDetailViewController.swift in Sources */,
 				742B2871297AFE0E00BCF003 /* APIConstants.swift in Sources */,
 				74425D852975C28100004439 /* Game.swift in Sources */,
+				746857A2297E935500368D2C /* UserDefaultsManager.swift in Sources */,
 				74425D4D2975AFF100004439 /* AppDelegate.swift in Sources */,
 				74F2F80F29797D650015B267 /* NoteCell.swift in Sources */,
 				742B2873297AFFBB00BCF003 /* LocalNotificationManager.swift in Sources */,
 				74F2F81729798AAA0015B267 /* Note.swift in Sources */,
 				74425D4F2975AFF100004439 /* SceneDelegate.swift in Sources */,
+				748AD90A297D4A52000FD0B6 /* FavoriteTableViewCell.swift in Sources */,
 				74F2F80C297965C10015B267 /* NewEntryViewController.swift in Sources */,
 				74425D832975BF8600004439 /* InternetReachabilityManager.swift in Sources */,
 				74425D812975BF4E00004439 /* NetworkManager.swift in Sources */,
 				74425D782975B39C00004439 /* ListViewController.swift in Sources */,
 				74D067362975CFCD00B014E4 /* GameDetailViewController.swift in Sources */,
+				748AD90C297D506C000FD0B6 /* GameFavorites.swift in Sources */,
+				748AD907297D4A1A000FD0B6 /* FavoriteViewController.swift in Sources */,
 				74425D572975AFF100004439 /* VideoGameApp.xcdatamodeld in Sources */,
 				74425D7D2975B72100004439 /* ListTableViewCell.swift in Sources */,
 				742B2869297AB2A700BCF003 /* CoreDataManager.swift in Sources */,
