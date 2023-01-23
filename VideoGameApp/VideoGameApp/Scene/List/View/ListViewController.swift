@@ -22,6 +22,10 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "Games"
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToDetailVC" {
