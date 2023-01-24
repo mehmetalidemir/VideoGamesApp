@@ -14,7 +14,7 @@ final class NewEntryViewController: UIViewController {
     @IBOutlet weak var noteTableView: UITableView!
 
     let noteCellIdentifier: String = "noteTableViewCell"
-    
+
     var notes: [Note] = []
     var game: Game?
 
@@ -22,7 +22,7 @@ final class NewEntryViewController: UIViewController {
         super.viewDidLoad()
         self.setupTableView()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         CoreDataManager.shared.fetchNotes { [weak self] result in
@@ -40,12 +40,12 @@ final class NewEntryViewController: UIViewController {
         }
         navigationItem.largeTitleDisplayMode = .always
     }
-    
+
     func setupTableView() {
         noteTableView.dataSource = self
         noteTableView.delegate = self
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editNote" {
             if let noteDetail = segue.destination as? NoteDetailViewController {
@@ -62,7 +62,7 @@ final class NewEntryViewController: UIViewController {
             }
         }
     }
-    
+
 }
 
 extension NewEntryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -73,12 +73,12 @@ extension NewEntryViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let noteCell = tableView.dequeueReusableCell(withIdentifier: noteCellIdentifier, for: indexPath) as? NoteCell {
-            
+
             let thisNote = notes[indexPath.row]
-            
+
             noteCell.titleLabel.text = thisNote.title
             noteCell.descLabel.text = thisNote.desc
-            
+
             return noteCell
         }
         return UITableViewCell()
@@ -87,5 +87,5 @@ extension NewEntryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "editNote", sender: nil)
     }
-    
+
 }

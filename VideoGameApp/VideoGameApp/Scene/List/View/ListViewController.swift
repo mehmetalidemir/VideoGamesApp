@@ -30,7 +30,6 @@ final class ListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Games".localized()
         self.tabBarController?.navigationItem.rightBarButtonItem?.isEnabled = true
-        
     }
 
 
@@ -77,7 +76,6 @@ final class ListViewController: UIViewController {
             // Fallback on earlier versions
         }
     }
-
 }
 
 extension ListViewController {

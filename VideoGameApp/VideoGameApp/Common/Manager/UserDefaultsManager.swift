@@ -9,15 +9,15 @@ import Foundation
 
 final class UserDefaultsManager {
     static let shared = UserDefaultsManager()
-    
-    private init() {  }
-    
+
+    private init() { }
+
     let favoritesKey: String = "GameFavoritesArray"
-    
+
     func getGameFavorites() -> [Int] {
         UserDefaults.standard.array(forKey: favoritesKey) as? [Int] ?? []
     }
-    
+
     func addNewGameFavorite(id: Int) {
         var intArray = self.getGameFavorites()
         if !(intArray.contains(id)) {
@@ -25,7 +25,7 @@ final class UserDefaultsManager {
         }
         UserDefaults.standard.set(intArray, forKey: favoritesKey)
     }
-    
+
     func removeGameFavorite(id: Int) {
         var intArray = self.getGameFavorites()
         if (intArray.contains(id)) {
@@ -34,5 +34,5 @@ final class UserDefaultsManager {
         }
         UserDefaults.standard.set(intArray, forKey: favoritesKey)
     }
-    
+
 }
