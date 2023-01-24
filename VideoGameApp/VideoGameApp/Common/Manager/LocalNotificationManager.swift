@@ -8,15 +8,15 @@
 import UserNotifications
 
 final class LocalNotificationManager {
-    
+
     static let shared = LocalNotificationManager()
-    
-    private init() {  }
-    
+
+    private init() { }
+
     func requestAccessFromUser() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (granted:Bool, error:Error?) in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted: Bool, error: Error?) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription as Any)
             }
             if granted {
                 print("Permission granted")
@@ -32,9 +32,9 @@ final class LocalNotificationManager {
 
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
-    
+
     func sendNotification() {
-        
+
         let content = UNMutableNotificationContent()
         let requestIdentifier = "newNoteNotification"
 
@@ -47,7 +47,7 @@ final class LocalNotificationManager {
         let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1.0, repeats: false)
 
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request) { (error:Error?) in
+        UNUserNotificationCenter.current().add(request) { (error: Error?) in
             if error != nil {
                 print(error?.localizedDescription ?? "some unknown error")
             }

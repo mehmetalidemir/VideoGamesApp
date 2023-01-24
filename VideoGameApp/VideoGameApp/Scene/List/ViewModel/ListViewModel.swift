@@ -8,9 +8,9 @@
 import Foundation
 
 final class ListViewModel {
-    
+
     var games: [Game] = []
-    
+
     func fetchGames(didGetSuccessfully: @escaping (Bool) -> Void) {
         NetworkManager.shared.fetchData { result in
             switch result {

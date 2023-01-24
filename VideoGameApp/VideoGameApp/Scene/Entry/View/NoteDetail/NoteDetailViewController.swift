@@ -9,23 +9,23 @@ import UIKit
 import CoreData
 
 class NoteDetailViewController: UIViewController {
-    
+
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var noteTextField: UITextField!
-    
+
     var game: Game?
     var selectedNote: Note? = nil
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if selectedNote != nil {
             noteTextField.text = selectedNote?.title
             descriptionTextView.text = selectedNote?.desc
         }
-        
+
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.largeTitleDisplayMode = .always
     }
@@ -36,7 +36,7 @@ class NoteDetailViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
         LocalNotificationManager.shared.sendNotification()
-        
+
     }
     @IBAction func deleteButtton(_ sender: Any) {
         if let note = selectedNote {

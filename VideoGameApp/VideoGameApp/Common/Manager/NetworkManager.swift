@@ -8,12 +8,12 @@
 import Foundation
 
 final class NetworkManager {
-    
+
     static let shared = NetworkManager()
-    
-    private init() {  }
-    
-    func fetchData(completionHandler: @escaping (Result<GameResponse,NetworkError>) -> Void) {
+
+    private init() { }
+
+    func fetchData(completionHandler: @escaping (Result<GameResponse, NetworkError>) -> Void) {
         if InternetReachabilityManager.shared.isInternetActive() {
             guard let url = URL(string: "\(APIConstants.baseAPI)\(APIConstants.gameEndpoint)\(APIConstants.apiKey)") else { return }
             URLSession.shared.dataTask(with: url) { data, _, error in
@@ -25,14 +25,14 @@ final class NetworkManager {
                     } catch {
                         completionHandler(.failure(NetworkError.decodingError))
                     }
-                    
+
                 } else {
                     completionHandler(.failure(NetworkError.networkError))
                 }
             }.resume()
         } else {
         }
-        
+
     }
 }
 
