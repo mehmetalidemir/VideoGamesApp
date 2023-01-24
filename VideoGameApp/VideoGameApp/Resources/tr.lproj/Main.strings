@@ -1,0 +1,66 @@
+
+/* Class = "UIButton"; configuration.title = "Save"; ObjectID = "5hy-1h-yA1"; */
+"5hy-1h-yA1.configuration.title" = "Kaydet";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5hy-1h-yA1"; */
+"5hy-1h-yA1.normalTitle" = "Kaydet";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "6YL-FW-lb8"; */
+"6YL-FW-lb8.title" = "Anasayfa";
+
+/* Class = "UINavigationItem"; title = "List"; ObjectID = "70S-hF-IuT"; */
+"70S-hF-IuT.title" = "List";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7IC-hW-F6o"; */
+"7IC-hW-F6o.text" = "Label";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "AZn-t3-zAR"; */
+"AZn-t3-zAR.text" = "Açıklama";
+
+/* Class = "UINavigationItem"; title = "Games"; ObjectID = "EDY-ic-wU4"; */
+"EDY-ic-wU4.title" = "Oyunlar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KAo-Yh-kSZ"; */
+"KAo-Yh-kSZ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Add Note"; ObjectID = "Npj-1W-Rba"; */
+"Npj-1W-Rba.title" = "Not Ekle";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OVQ-ll-SOT"; */
+"OVQ-ll-SOT.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Qsg-1j-8Xh"; */
+"Qsg-1j-8Xh.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Notes"; ObjectID = "U4i-NE-YSh"; */
+"U4i-NE-YSh.title" = "Notlar";
+
+/* Class = "UILabel"; text = "sdasda"; ObjectID = "X8k-bO-yX9"; */
+"X8k-bO-yX9.text" = "sdasda";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XYS-SD-cir"; */
+"XYS-SD-cir.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dJq-06-Sg9"; */
+"dJq-06-Sg9.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "j7m-iS-K7Y"; */
+"j7m-iS-K7Y.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kmY-Ob-K8i"; */
+"kmY-Ob-K8i.text" = "Label";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "nuE-62-cDE"; */
+"nuE-62-cDE.text" = "Açıklama";
+
+/* Class = "UITabBarItem"; title = "Favorite"; ObjectID = "qQR-CX-fih"; */
+"qQR-CX-fih.title" = "Favoriler";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "uGv-ap-mnl"; */
+"uGv-ap-mnl.title" = "Item";
+
+/* Class = "UIButton"; configuration.title = "Delete"; ObjectID = "zEK-oX-rQS"; */
+"zEK-oX-rQS.configuration.title" = "Sil";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zEK-oX-rQS"; */
+"zEK-oX-rQS.normalTitle" = "Sil";

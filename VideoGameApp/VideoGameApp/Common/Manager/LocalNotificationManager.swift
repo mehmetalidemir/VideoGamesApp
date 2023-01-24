@@ -39,8 +39,8 @@ final class LocalNotificationManager {
         let requestIdentifier = "newNoteNotification"
 
         content.badge = 1
-        content.title = "New note"
-        content.body = "New note successfully added"
+        content.title = "New note".localized()
+        content.body = "New note successfully added".localized()
         content.categoryIdentifier = "actionCategory"
         content.sound = UNNotificationSound.default
 
