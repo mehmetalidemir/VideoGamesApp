@@ -23,9 +23,9 @@ final class GameDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         checkIfGameIsFavorite()
-        
+
         self.gameLabel.text = game.name
 
         let url = URL(string: game.background_image)
@@ -34,20 +34,20 @@ final class GameDetailViewController: UIViewController {
         let ratingText = "★ \(game.rating)"
         self.ratingLabel.text = String(ratingText)
 
-        let reviewsCountText = " (\(game.reviews_count) Reviews)"
+        let reviewsCountText = String(format: NSLocalizedString("reviews_count_format", comment: ""), game.reviews_count)
         self.reviews_countLabel.text = String(reviewsCountText)
 
-        let releasedText = "Relased Date : \(game.released)"
+        let releasedText = NSLocalizedString("released_format", comment: "") + game.released
         self.releasedLabel.text = String(releasedText)
 
-        let genresText = "Genres: \(game.genres.map { $0.name }.joined(separator: ","))"
+        let genresText = NSLocalizedString("genres_format", comment: "") + game.genres.map { $0.name }.joined(separator: ",")
         self.genres.text = String(genresText)
 
-        let platformsText = "Platforms: \(game.platforms.map { $0.platform.name }.joined(separator: ", "))"
+        let platformsText = NSLocalizedString("platforms_format", comment: "") + game.platforms.map { $0.platform.name }.joined(separator: ", ")
         self.platforms.text = String(platformsText)
 
     }
-    
+
     func checkIfGameIsFavorite() {
         let favoriteArray = UserDefaultsManager.shared.getGameFavorites()
         DispatchQueue.main.async { [weak self] in
@@ -58,9 +58,9 @@ final class GameDetailViewController: UIViewController {
                 self.favoriteIconButton.image = UIImage(systemName: "star")
             }
         }
-        
+
     }
-    
+
     @IBAction func favoriteButton(_ sender: Any) {
         let array = UserDefaultsManager.shared.getGameFavorites()
         if array.contains(self.game.id) {
@@ -75,9 +75,9 @@ final class GameDetailViewController: UIViewController {
             }
         }
         checkIfGameIsFavorite()
-        
+
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToNotesView" {
             guard let entryVC = segue.destination as? NewEntryViewController else { return }

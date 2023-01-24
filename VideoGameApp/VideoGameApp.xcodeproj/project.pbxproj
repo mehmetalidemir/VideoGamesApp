@@ -29,6 +29,8 @@
 		748AD90A297D4A52000FD0B6 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AD909297D4A52000FD0B6 /* FavoriteTableViewCell.swift */; };
 		748AD90C297D506C000FD0B6 /* GameFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AD90B297D506C000FD0B6 /* GameFavorites.swift */; };
 		74D067362975CFCD00B014E4 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D067352975CFCD00B014E4 /* GameDetailViewController.swift */; };
+		74E87156297F1DE800D5895B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74E87158297F1DE800D5895B /* Localizable.strings */; };
+		74E8715B297F281E00D5895B /* StringLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E8715A297F281E00D5895B /* StringLocalization.swift */; };
 		74F2F80C297965C10015B267 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2F80B297965C10015B267 /* NewEntryViewController.swift */; };
 		74F2F80F29797D650015B267 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2F80E29797D650015B267 /* NoteCell.swift */; };
 		74F2F81129797DB20015B267 /* NoteTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2F81029797DB20015B267 /* NoteTableViewModel.swift */; };
@@ -59,6 +61,10 @@
 		748AD909297D4A52000FD0B6 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteTableViewCell.swift; path = ../../../../../../../../.Trash/Favorite/View/Cell/FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		748AD90B297D506C000FD0B6 /* GameFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavorites.swift; sourceTree = "<group>"; };
 		74D067352975CFCD00B014E4 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		74E87153297F1D6500D5895B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		74E87157297F1DE800D5895B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		74E87159297F1DF300D5895B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		74E8715A297F281E00D5895B /* StringLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLocalization.swift; sourceTree = "<group>"; };
 		74F2F80B297965C10015B267 /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 		74F2F80E29797D650015B267 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		74F2F81029797DB20015B267 /* NoteTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 				74425D5A2975AFF200004439 /* LaunchScreen.storyboard */,
 				74425D522975AFF100004439 /* Main.storyboard */,
 				74425D582975AFF200004439 /* Assets.xcassets */,
+				74E87158297F1DE800D5895B /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 		74425D6B2975B09E00004439 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				74E8715A297F281E00D5895B /* StringLocalization.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -366,6 +374,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 74425D402975AFF100004439;
 			packageReferences = (
@@ -387,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74425D5C2975AFF200004439 /* LaunchScreen.storyboard in Resources */,
+				74E87156297F1DE800D5895B /* Localizable.strings in Resources */,
 				74425D592975AFF200004439 /* Assets.xcassets in Resources */,
 				74425D542975AFF100004439 /* Main.storyboard in Resources */,
 			);
@@ -417,6 +427,7 @@
 				74D067362975CFCD00B014E4 /* GameDetailViewController.swift in Sources */,
 				748AD90C297D506C000FD0B6 /* GameFavorites.swift in Sources */,
 				748AD907297D4A1A000FD0B6 /* FavoriteViewController.swift in Sources */,
+				74E8715B297F281E00D5895B /* StringLocalization.swift in Sources */,
 				74425D572975AFF100004439 /* VideoGameApp.xcdatamodeld in Sources */,
 				74425D7D2975B72100004439 /* ListTableViewCell.swift in Sources */,
 				742B2869297AB2A700BCF003 /* CoreDataManager.swift in Sources */,
@@ -431,6 +442,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74425D532975AFF100004439 /* Base */,
+				74E87153297F1D6500D5895B /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -443,6 +455,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		74E87158297F1DE800D5895B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74E87157297F1DE800D5895B /* en */,
+				74E87159297F1DF300D5895B /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -450,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -510,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

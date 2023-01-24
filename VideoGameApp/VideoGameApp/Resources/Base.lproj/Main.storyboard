@@ -391,12 +391,12 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Games-->
         <scene sceneID="Ehb-rr-aX1">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fhh-95-c2w" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="EDY-ic-wU4"/>
+                    <navigationItem key="navigationItem" title="Games" id="EDY-ic-wU4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nKR-1e-FRm">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

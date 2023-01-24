@@ -26,8 +26,13 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         searchBar.delegate = self
-        self.tabBarController?.navigationItem.title = "Games"
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = "Games".localized()
+        self.tabBarController?.navigationItem.rightBarButtonItem?.isEnabled = true
+        
+    }
+
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToDetailVC" {
@@ -61,11 +66,11 @@ final class ListViewController: UIViewController {
                 })
             actions.append(action)
         }
-        let items = UIMenu(title: "Filter by", options: .displayInline, children: actions)
+        let items = UIMenu(title: "Filter by".localized(), options: .displayInline, children: actions)
         self.filterButton = UIMenu(title: "", children: [items])
         if #available(iOS 14.0, *) {
             self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Categories", image: UIImage(systemName: "arrowtriangle.down.circle.fill"), primaryAction: nil, menu: filterButton)
-           
+
         } else {
             // Fallback on earlier versions
         }
@@ -151,3 +156,4 @@ extension ListViewController: UISearchBarDelegate {
         }
     }
 }
+
