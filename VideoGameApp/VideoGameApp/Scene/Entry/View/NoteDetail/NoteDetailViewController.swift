@@ -25,6 +25,10 @@ class NoteDetailViewController: UIViewController {
         }
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.largeTitleDisplayMode = .always
+    }
     @IBAction func saveButton(_ sender: Any) {
         CoreDataManager.shared.createNote(title: noteTextField.text ?? "", desc: descriptionTextView.text ?? "", gameName: self.game?.name ?? "", id: noteList.count as NSNumber) { [weak self] in
             guard let self = self else { return }

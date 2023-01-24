@@ -4,12 +4,21 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GamestationCondensed-GYay.otf">
+            <string>Gamestation-Condensed</string>
+        </array>
+        <array key="Righteous-Regular.ttf">
+            <string>Righteous-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--List-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="VideoGameApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,16 +26,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SMU-SG-oSU">
-                                <rect key="frame" x="0.0" y="144" width="414" height="56"/>
+                            <searchBar contentMode="redraw" barStyle="black" placeholder="Search Game" translatesAutoresizingMaskIntoConstraints="NO" id="SMU-SG-oSU">
+                                <rect key="frame" x="0.0" y="147.5" width="414" height="56"/>
+                                <color key="barTintColor" name="bgColor"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4Br-HL-CHK"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cXf-OC-i3k">
-                                <rect key="frame" x="0.0" y="200" width="414" height="613"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cXf-OC-i3k">
+                                <rect key="frame" x="0.0" y="203.5" width="414" height="609.5"/>
+                                <color key="backgroundColor" name="bgColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" rowHeight="130" id="VEh-aU-Q3n" customClass="ListTableViewCell" customModule="VideoGameApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="130"/>
@@ -35,10 +46,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdasda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-bO-yX9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-bO-yX9">
                                                     <rect key="frame" x="24" y="15" width="237" height="100"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="backgroundColor" name="bgColor"/>
+                                                    <fontDescription key="fontDescription" name="Gamestation-Condensed" family="Gamestation" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-i3-O3u">
@@ -54,6 +66,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" name="bgColor"/>
                                             <constraints>
                                                 <constraint firstItem="X8k-bO-yX9" firstAttribute="leading" secondItem="VH5-DB-k5T" secondAttribute="leadingMargin" constant="4" id="3FM-gF-drN"/>
                                                 <constraint firstItem="X8k-bO-yX9" firstAttribute="bottom" secondItem="hpx-i3-O3u" secondAttribute="bottom" id="GPT-N8-jLP"/>
@@ -64,6 +77,7 @@
                                                 <constraint firstItem="X8k-bO-yX9" firstAttribute="top" secondItem="VH5-DB-k5T" secondAttribute="topMargin" constant="4" id="gIS-IN-xn7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="bgColor"/>
                                         <connections>
                                             <outlet property="gameImageView" destination="hpx-i3-O3u" id="lSe-AU-cvv"/>
                                             <outlet property="gameLabel" destination="X8k-bO-yX9" id="PWe-9W-NoS"/>
@@ -74,11 +88,13 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" id="0s6-O1-VFU">
                                 <rect key="frame" x="0.0" y="302" width="414" height="291"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="0.92237426639999998" green="0.47428392390000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="bgColor"/>
+                                <color key="color" name="mainColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
+                        <color key="tintColor" name="mainColor"/>
                         <constraints>
                             <constraint firstItem="SMU-SG-oSU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Est-q4-hoS"/>
                             <constraint firstItem="SMU-SG-oSU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FBl-3B-4p8"/>
@@ -89,8 +105,10 @@
                             <constraint firstItem="cXf-OC-i3k" firstAttribute="top" secondItem="SMU-SG-oSU" secondAttribute="bottom" id="rcN-NY-ZdN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="gamecontroller.fill" catalog="system" id="6YL-FW-lb8"/>
-                    <navigationItem key="navigationItem" title="List" largeTitleDisplayMode="always" id="70S-hF-IuT"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="gamecontroller" catalog="system" selectedImage="gamecontroller.fill" id="6YL-FW-lb8">
+                        <color key="badgeColor" name="mainColor"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="70S-hF-IuT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="gameTableView" destination="cXf-OC-i3k" id="s5M-Qe-u8q"/>
@@ -112,13 +130,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wrt-kk-faV">
-                                <rect key="frame" x="0.0" y="128" width="414" height="180"/>
+                                <rect key="frame" x="0.0" y="201" width="414" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="jyS-Cf-AEF"/>
+                                    <constraint firstAttribute="height" constant="200" id="jyS-Cf-AEF"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-If-E2E">
-                                <rect key="frame" x="315" y="316" width="83" height="20.5"/>
+                                <rect key="frame" x="327" y="409" width="83" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAo-Yh-kSZ">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -129,49 +147,51 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYS-SD-cir">
                                         <rect key="frame" x="41.5" y="0.0" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DO0-YG-qCt">
-                                <rect key="frame" x="16" y="344.5" width="382" height="165.5"/>
+                                <rect key="frame" x="16" y="437.5" width="382" height="116.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsg-1j-8Xh">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJq-06-Sg9">
-                                        <rect key="frame" x="0.0" y="53.5" width="382" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Gamestation-Condensed" family="Gamestation" pointSize="22"/>
+                                        <color key="textColor" red="1" green="0.99379992439999998" blue="0.93866582610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVQ-ll-SOT">
-                                        <rect key="frame" x="0.0" y="97.5" width="382" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="45.5" width="382" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Gamestation-Condensed" family="Gamestation" pointSize="22"/>
+                                        <color key="textColor" red="1" green="0.99379992439999998" blue="0.93866582610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IC-hW-F6o">
-                                        <rect key="frame" x="0.0" y="141.5" width="382" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="91" width="382" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Gamestation-Condensed" family="Gamestation" pointSize="22"/>
+                                        <color key="textColor" red="1" green="0.99379992439999998" blue="0.93866582610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsg-1j-8Xh">
+                                <rect key="frame" x="8" y="155.5" width="398" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Righteous-Regular" family="Righteous" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4ls-zQ-EJH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                         <constraints>
-                            <constraint firstItem="Wrt-kk-faV" firstAttribute="top" secondItem="eVH-UQ-4Ye" secondAttribute="top" constant="128" id="Bas-Yd-EPO"/>
+                            <constraint firstItem="Wrt-kk-faV" firstAttribute="top" secondItem="Qsg-1j-8Xh" secondAttribute="bottom" constant="8" id="5tc-6R-xO4"/>
+                            <constraint firstAttribute="trailing" secondItem="Qsg-1j-8Xh" secondAttribute="trailing" constant="8" id="GuZ-es-Rev"/>
+                            <constraint firstItem="Qsg-1j-8Xh" firstAttribute="top" secondItem="4ls-zQ-EJH" secondAttribute="top" constant="8" id="HR1-bB-GKt"/>
                             <constraint firstItem="4ls-zQ-EJH" firstAttribute="trailing" secondItem="DO0-YG-qCt" secondAttribute="trailing" constant="16" id="X1B-0f-6e3"/>
                             <constraint firstItem="DO0-YG-qCt" firstAttribute="centerX" secondItem="eVH-UQ-4Ye" secondAttribute="centerX" id="XdU-Qv-pcD"/>
-                            <constraint firstItem="Wrt-kk-faV" firstAttribute="centerX" secondItem="eVH-UQ-4Ye" secondAttribute="centerX" id="asW-ki-veE"/>
-                            <constraint firstItem="4ls-zQ-EJH" firstAttribute="trailing" secondItem="Kc9-If-E2E" secondAttribute="trailing" constant="16" id="hPt-aw-4xA"/>
+                            <constraint firstItem="Qsg-1j-8Xh" firstAttribute="leading" secondItem="eVH-UQ-4Ye" secondAttribute="leading" constant="8" id="gyg-LR-Bak"/>
+                            <constraint firstItem="4ls-zQ-EJH" firstAttribute="trailing" secondItem="Kc9-If-E2E" secondAttribute="trailing" constant="4" id="hPt-aw-4xA"/>
                             <constraint firstItem="4ls-zQ-EJH" firstAttribute="trailing" secondItem="Wrt-kk-faV" secondAttribute="trailing" id="lh1-7W-H8R"/>
                             <constraint firstItem="Wrt-kk-faV" firstAttribute="leading" secondItem="4ls-zQ-EJH" secondAttribute="leading" id="rd1-gM-i7T"/>
                             <constraint firstItem="Kc9-If-E2E" firstAttribute="top" secondItem="Wrt-kk-faV" secondAttribute="bottom" constant="8" id="sCh-wm-9dM"/>
@@ -182,11 +202,13 @@
                     <navigationItem key="navigationItem" id="X3H-r4-Ikh">
                         <rightBarButtonItems>
                             <barButtonItem image="text.bubble.fill" catalog="system" id="ySt-sN-097">
+                                <color key="tintColor" name="mainColor"/>
                                 <connections>
                                     <segue destination="RSq-QV-V5R" kind="show" identifier="goToNotesView" id="RZy-Xd-2O7"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="star" catalog="system" id="uGv-ap-mnl">
+                                <color key="tintColor" name="mainColor"/>
                                 <connections>
                                     <action selector="favoriteButton:" destination="MQm-fq-ynY" id="R1j-jw-T0C"/>
                                 </connections>
@@ -221,7 +243,8 @@
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ru2-qX-ZEV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="bgColor"/>
+                                <color key="separatorColor" name="bgColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteTableViewCell" id="MzN-ne-8X6" customClass="NoteCell" customModule="VideoGameApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="100"/>
@@ -236,7 +259,7 @@
                                                         <constraint firstAttribute="height" constant="40" id="jSh-dm-8qI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="mainColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZn-t3-zAR">
@@ -245,10 +268,11 @@
                                                         <constraint firstAttribute="height" constant="30" id="elo-RY-MJZ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="0.99379992439999998" blue="0.93866582610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="bgColor"/>
                                             <constraints>
                                                 <constraint firstItem="j7m-iS-K7Y" firstAttribute="leading" secondItem="T8R-x3-XrR" secondAttribute="leadingMargin" constant="8" id="21e-zm-MpZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="AZn-t3-zAR" secondAttribute="trailing" constant="10" id="Ac2-3L-xtt"/>
@@ -258,6 +282,7 @@
                                                 <constraint firstItem="j7m-iS-K7Y" firstAttribute="top" secondItem="T8R-x3-XrR" secondAttribute="topMargin" constant="8" id="tAH-wz-Ll2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="bgColor"/>
                                         <connections>
                                             <outlet property="descLabel" destination="AZn-t3-zAR" id="uL6-bb-Kl3"/>
                                             <outlet property="titleLabel" destination="j7m-iS-K7Y" id="Rb0-Q4-VCY"/>
@@ -267,7 +292,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YgV-Xc-apG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                         <constraints>
                             <constraint firstItem="KRR-R5-FdN" firstAttribute="top" secondItem="9Yk-sG-eYP" secondAttribute="top" id="5qQ-4p-cT0"/>
                             <constraint firstItem="KRR-R5-FdN" firstAttribute="trailing" secondItem="YgV-Xc-apG" secondAttribute="trailing" id="5qj-cZ-mY8"/>
@@ -302,50 +327,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBi-g6-D2d">
-                                <rect key="frame" x="8" y="176" width="398" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBi-g6-D2d">
+                                <rect key="frame" x="4" y="179.5" width="406" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuE-62-cDE">
-                                <rect key="frame" x="163.5" y="226" width="87" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="168.5" y="229.5" width="77" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Gamestation-Condensed" family="Gamestation" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.99379992439999998" blue="0.93866582610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZWI-k0-zUf">
-                                <rect key="frame" x="87" y="279" width="240" height="120"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="87" y="269" width="240" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="3St-wh-4xr"/>
                                     <constraint firstAttribute="width" constant="240" id="ilR-yP-Pbn"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-oX-rQS">
-                                <rect key="frame" x="170" y="431" width="74" height="35"/>
+                                <rect key="frame" x="162" y="405" width="90" height="49"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete">
+                                    <fontDescription key="titleFontDescription" name="Gamestation-Condensed" family="Gamestation" pointSize="30"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="deleteButtton:" destination="7Nv-DS-uZP" eventType="touchUpInside" id="Pht-H8-yAS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aAk-cv-I9V"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" name="bgColor"/>
                         <constraints>
-                            <constraint firstItem="zEK-oX-rQS" firstAttribute="top" secondItem="ZWI-k0-zUf" secondAttribute="bottom" constant="32" id="8kc-M6-dwr"/>
+                            <constraint firstItem="zEK-oX-rQS" firstAttribute="top" secondItem="ZWI-k0-zUf" secondAttribute="bottom" constant="16" id="8kc-M6-dwr"/>
                             <constraint firstItem="ZWI-k0-zUf" firstAttribute="centerX" secondItem="7Ix-ik-mfh" secondAttribute="centerX" id="Cck-qz-9Ne"/>
-                            <constraint firstItem="ZWI-k0-zUf" firstAttribute="top" secondItem="nuE-62-cDE" secondAttribute="bottom" constant="32" id="QDU-Zq-gGh"/>
-                            <constraint firstItem="rBi-g6-D2d" firstAttribute="leading" secondItem="aAk-cv-I9V" secondAttribute="leading" constant="8" id="TbU-aj-s42"/>
+                            <constraint firstItem="ZWI-k0-zUf" firstAttribute="top" secondItem="nuE-62-cDE" secondAttribute="bottom" constant="16" id="QDU-Zq-gGh"/>
                             <constraint firstItem="rBi-g6-D2d" firstAttribute="top" secondItem="aAk-cv-I9V" secondAttribute="top" constant="32" id="hu5-nP-kLq"/>
-                            <constraint firstItem="aAk-cv-I9V" firstAttribute="trailing" secondItem="rBi-g6-D2d" secondAttribute="trailing" constant="8" id="lFs-sC-9Gc"/>
                             <constraint firstItem="nuE-62-cDE" firstAttribute="top" secondItem="rBi-g6-D2d" secondAttribute="bottom" constant="16" id="nk8-oX-8u4"/>
-                            <constraint firstItem="rBi-g6-D2d" firstAttribute="centerX" secondItem="7Ix-ik-mfh" secondAttribute="centerX" id="v8w-fh-Cfg"/>
+                            <constraint firstItem="aAk-cv-I9V" firstAttribute="trailing" secondItem="rBi-g6-D2d" secondAttribute="trailing" constant="4" id="xHB-5e-ztq"/>
                             <constraint firstItem="zEK-oX-rQS" firstAttribute="centerX" secondItem="7Ix-ik-mfh" secondAttribute="centerX" id="yKH-X1-qgE"/>
                             <constraint firstItem="nuE-62-cDE" firstAttribute="centerX" secondItem="7Ix-ik-mfh" secondAttribute="centerX" id="yNr-23-Rod"/>
+                            <constraint firstItem="rBi-g6-D2d" firstAttribute="leading" secondItem="aAk-cv-I9V" secondAttribute="leading" constant="4" id="ypX-dI-SWY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Note" id="Npj-1W-Rba">
@@ -359,6 +390,7 @@
                                     <action selector="saveButton:" destination="7Nv-DS-uZP" eventType="touchUpInside" id="iuL-W7-h5X"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" name="mainColor"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -376,8 +408,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CvE-jF-1kh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="KbS-ls-aC1">
-                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="99.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="bgColor"/>
+                        <color key="tintColor" name="mainColor"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Righteous-Regular" family="Righteous" pointSize="40"/>
+                            <color key="textColor" name="mainColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SAl-Qg-YRZ">
@@ -396,12 +434,16 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fhh-95-c2w" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Games" id="EDY-ic-wU4"/>
+                    <navigationItem key="navigationItem" title="Games" largeTitleDisplayMode="always" id="EDY-ic-wU4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nKR-1e-FRm">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="standardAppearance"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="bgColor"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="bgColor"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wTR-lO-ek6"/>
@@ -422,7 +464,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SiJ-v3-11P">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="bgColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriteCell" rowHeight="200" id="oLL-Az-H5y" customClass="FavoriteTableViewCell" customModule="VideoGameApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="200"/>
@@ -445,8 +487,8 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmY-Ob-K8i">
                                                     <rect key="frame" x="183" y="4" width="227" height="192"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Gamestation-Condensed" family="Gamestation" pointSize="20"/>
+                                                    <color key="textColor" name="mainColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -460,6 +502,7 @@
                                                 <constraint firstItem="W4k-rh-oGR" firstAttribute="top" secondItem="kuH-4C-Rjd" secondAttribute="topMargin" constant="21" id="qdr-ff-kDS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="bgColor"/>
                                         <connections>
                                             <outlet property="favoriteImage" destination="W4k-rh-oGR" id="Wi8-E0-tk3"/>
                                             <outlet property="favoriteLabel" destination="kmY-Ob-K8i" id="WJn-cd-XhS"/>
@@ -469,7 +512,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rpF-MY-cG2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                         <constraints>
                             <constraint firstItem="rpF-MY-cG2" firstAttribute="trailing" secondItem="SiJ-v3-11P" secondAttribute="trailing" id="0eE-0z-s6Y"/>
                             <constraint firstItem="rpF-MY-cG2" firstAttribute="bottom" secondItem="SiJ-v3-11P" secondAttribute="bottom" id="3dE-TU-s2L"/>
@@ -477,7 +520,9 @@
                             <constraint firstItem="SiJ-v3-11P" firstAttribute="leading" secondItem="rpF-MY-cG2" secondAttribute="leading" id="uAA-mG-kFL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorite" image="star.fill" catalog="system" id="qQR-CX-fih"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="star" catalog="system" selectedImage="star.fill" id="qQR-CX-fih">
+                        <color key="badgeColor" name="mainColor"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="favoriteTableView" destination="SiJ-v3-11P" id="lVh-sr-ZHH"/>
                     </connections>
@@ -491,19 +536,20 @@
         <segue reference="ZC1-IN-DN6"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="text.bubble.fill" catalog="system" width="128" height="110"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="bgColor">
+            <color red="0.14509803921568629" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainColor">
+            <color red="0.29803921568627451" green="0.83137254901960789" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

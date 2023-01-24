@@ -47,6 +47,9 @@ final class GameDetailViewController: UIViewController {
         self.platforms.text = String(platformsText)
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.largeTitleDisplayMode = .never
+    }
 
     func checkIfGameIsFavorite() {
         let favoriteArray = UserDefaultsManager.shared.getGameFavorites()
@@ -86,3 +89,4 @@ final class GameDetailViewController: UIViewController {
     }
 
 }
+
