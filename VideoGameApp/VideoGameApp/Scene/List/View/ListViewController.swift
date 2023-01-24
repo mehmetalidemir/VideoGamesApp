@@ -68,8 +68,10 @@ final class ListViewController: UIViewController {
         }
         let items = UIMenu(title: "Filter by".localized(), options: .displayInline, children: actions)
         self.filterButton = UIMenu(title: "", children: [items])
+
         if #available(iOS 14.0, *) {
             self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Categories", image: UIImage(systemName: "arrowtriangle.down.circle.fill"), primaryAction: nil, menu: filterButton)
+            self.tabBarController?.navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "mainColor")
 
         } else {
             // Fallback on earlier versions

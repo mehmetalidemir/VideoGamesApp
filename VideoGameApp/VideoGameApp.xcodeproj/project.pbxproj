@@ -25,6 +25,8 @@
 		74425D832975BF8600004439 /* InternetReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D822975BF8600004439 /* InternetReachabilityManager.swift */; };
 		74425D852975C28100004439 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74425D842975C28100004439 /* Game.swift */; };
 		746857A2297E935500368D2C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746857A1297E935500368D2C /* UserDefaultsManager.swift */; };
+		747D1F37297FF5290054667C /* GamestationCondensed-GYay.otf in Resources */ = {isa = PBXBuildFile; fileRef = 747D1F36297FF5290054667C /* GamestationCondensed-GYay.otf */; };
+		747D1F3D2980039E0054667C /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 747D1F3C2980039E0054667C /* Righteous-Regular.ttf */; };
 		748AD907297D4A1A000FD0B6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AD906297D4A1A000FD0B6 /* FavoriteViewController.swift */; };
 		748AD90A297D4A52000FD0B6 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AD909297D4A52000FD0B6 /* FavoriteTableViewCell.swift */; };
 		748AD90C297D506C000FD0B6 /* GameFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748AD90B297D506C000FD0B6 /* GameFavorites.swift */; };
@@ -57,6 +59,8 @@
 		74425D822975BF8600004439 /* InternetReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetReachabilityManager.swift; sourceTree = "<group>"; };
 		74425D842975C28100004439 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		746857A1297E935500368D2C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		747D1F36297FF5290054667C /* GamestationCondensed-GYay.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GamestationCondensed-GYay.otf"; sourceTree = "<group>"; };
+		747D1F3C2980039E0054667C /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
 		748AD906297D4A1A000FD0B6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteViewController.swift; path = ../../../../../../../.Trash/Favorite/View/FavoriteViewController.swift; sourceTree = "<group>"; };
 		748AD909297D4A52000FD0B6 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteTableViewCell.swift; path = ../../../../../../../../.Trash/Favorite/View/Cell/FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		748AD90B297D506C000FD0B6 /* GameFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavorites.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		74425D632975B05000004439 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				747D1F35297FF51B0054667C /* Font */,
 				74425D552975AFF100004439 /* VideoGameApp.xcdatamodeld */,
 				74425D5D2975AFF200004439 /* Info.plist */,
 				74425D5A2975AFF200004439 /* LaunchScreen.storyboard */,
@@ -250,6 +255,15 @@
 				74425D7C2975B72100004439 /* ListTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		747D1F35297FF51B0054667C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				747D1F3C2980039E0054667C /* Righteous-Regular.ttf */,
+				747D1F36297FF5290054667C /* GamestationCondensed-GYay.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		748AD903297D49E9000FD0B6 /* Favorite */ = {
@@ -396,6 +410,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				74425D5C2975AFF200004439 /* LaunchScreen.storyboard in Resources */,
+				747D1F37297FF5290054667C /* GamestationCondensed-GYay.otf in Resources */,
+				747D1F3D2980039E0054667C /* Righteous-Regular.ttf in Resources */,
 				74E87156297F1DE800D5895B /* Localizable.strings in Resources */,
 				74425D592975AFF200004439 /* Assets.xcassets in Resources */,
 				74425D542975AFF100004439 /* Main.storyboard in Resources */,
@@ -593,6 +609,7 @@
 				DEVELOPMENT_TEAM = 3CY5GSUS4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoGameApp/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Video Game";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -622,6 +639,7 @@
 				DEVELOPMENT_TEAM = 3CY5GSUS4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoGameApp/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Video Game";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

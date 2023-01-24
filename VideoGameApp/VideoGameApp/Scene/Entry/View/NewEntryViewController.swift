@@ -38,6 +38,7 @@ final class NewEntryViewController: UIViewController {
             }
             self.noteTableView.reloadData()
         }
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     func setupTableView() {
